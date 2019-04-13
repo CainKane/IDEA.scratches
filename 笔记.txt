@@ -1,0 +1,45 @@
+{DOM自定义属性}
+通过data-[自定义属性]添加的dom属性会存在该dom元素的dataset属性中 比如 $0 = <p data-cain = "cc"></p>  那么$0.dataset.cain //<-"cc"
+    需要注意的是:以-连起来的属性名js会自动转换为驼峰字,比如data-cain-dd -> dataset.cainDd
+    =>如果是非data-开头的dom不能识别的自定义属性名 则不会在dataset属性中出现 而是会在$0.attributes中,比如$0 = <p Appname = "cc"></p> 则$0.attributes.csc // <- "cc";也可以按照添加顺序使用: $0.attributes[0]
+
+
+{数组中的对象去重}
+var arr = [{
+      key: '01',
+      value: '乐乐'
+   }, {
+      key: '02',
+      value: '博博'
+   }, {
+      key: '03',
+      value: '淘淘'
+   },{
+      key: '04',
+      value: '哈哈'
+   },{
+      key: '01',
+      value: '乐乐'
+   }];
+
+
+   //  方法1：利用对象访问属性的方法，判断对象中是否存在key
+   var result = [];
+   var obj = {};
+   for(var i =0; i<arr.length; i++){
+      if(!obj[arr[i].key]){
+         result.push(arr[i]);
+         obj[arr[i].key] = true;
+      }
+   }
+   console.log(result); // [{key: "01", value: "乐乐"},{key: "02", value: "博博"},{key: "03", value: "淘淘"},{key: "04", value: "哈哈"}]
+
+
+
+   //  方法2：利用reduce方法遍历数组,reduce第一个参数是遍历需要执行的函数，第二个参数是item的初始值
+      var obj = {};
+    arr = arr.reduce(function(item, next) {
+      obj[next.key] ? '' : obj[next.key] = true && item.push(next);
+      return item;
+   }, []);
+   console.log(arr); // [{key: "01", value: "乐乐"},{key: "02", value: "博博"},{key: "03", value: "淘淘"},{key: "04", value: "哈哈"}]
