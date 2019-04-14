@@ -1,0 +1,69 @@
+{
+    前端技术栈 : {
+        
+        "Native Javascript [ES5]" : [
+            "Object类型的所有方法" ,
+            "String类型的所有方法" ,
+            "Array类型的所有方法" ,
+            "Function类型的所有方法" ,
+            {
+                "[ES6]" : [
+                    "...运算符" ,
+                    "解构" ,
+                    "Symbol数据类型" ,
+                    "Promise" ,
+                    "Proxy" ,
+                    "import , export" ,
+                    "CommonJS : require,module.exports"
+                ]
+            } ,
+            "jQuery源代码" ,
+            "prototype的底层机制" ,
+            "设计模式" ,
+            "BOM API , 事件" ,
+            "DOM API 对象,原型" ,
+            "worker多线程"
+        
+        ] ,
+        Javascript周边技术栈 : [
+            "正则表达式"
+        
+        ] ,
+        Javascript类库技术栈 : [
+            {
+                React : [
+                    "" ,
+                    "React" ,
+                    "Redux" ,
+                    "React-Redux" ,
+                    "Props的原理" ,
+                    "State的原理" ,
+                    "生命周期原理"
+                ]
+            } ,
+            "Vue" ,
+            "VueX"
+        ] ,
+        Javascript插件库 : [
+            "Echats" ,
+            "Swiper"
+        
+        ] ,
+        CSS : [
+            "Float" ,
+            "Grid布局" ,
+            "em" ,
+            "rem" ,
+            "媒体查询" ,
+            "Less高级" ,
+            "Sass"
+        ] ,
+        其他技术栈 : [
+            "webpack进阶 , webpack.config.js" ,
+            "NodeJS" ,
+            "NPM包管理" ,
+            "Babel , Babel.config.js" ,
+            "Git"
+        ]
+    }
+}
