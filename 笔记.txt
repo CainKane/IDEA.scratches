@@ -43,3 +43,12 @@ var arr = [{
       return item;
    }, []);
    console.log(arr); // [{key: "01", value: "乐乐"},{key: "02", value: "博博"},{key: "03", value: "淘淘"},{key: "04", value: "哈哈"}]
+
+
+
+{React中的生命周期钩子}
+componentWillMount : 元素即将插入DOM流
+componentDidMount : 元素已插入DOM流
+componentWillUnmount : 元素即将从DOM流中移除
+
+
