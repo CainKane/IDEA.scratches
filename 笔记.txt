@@ -43,3 +43,34 @@ var arr = [{
       return item;
    }, []);
    console.log(arr); // [{key: "01", value: "乐乐"},{key: "02", value: "博博"},{key: "03", value: "淘淘"},{key: "04", value: "哈哈"}]
+
+
+
+{React中的生命周期钩子}
+componentWillMount : 元素即将插入DOM流
+componentDidMount : 元素已插入DOM流
+componentWillUnmount : 元素即将从DOM流中移除
+
+
+{订阅发布 fbemitter}
+[emit (eventType:事件类型<string>)] :  触发注册了该事件的所有函数
+[addListener] :  将回调函数注册到指定的事件类型上
+[once (eventType:事件类型<string>),(callbackFn :要注册的回调函数<function>),([context]:)] : (...同上) 类似于addListener 但该方法注册的事件方法调用一次后移除
+[removeAllListeners (eventType:事件类型<string>)] :  移除该事件类型上注册的所有回调函数
+[removeCurrentListener] :  移除当前正在运行的
+[listeners (eventType : 事件类型<string>)] :  返回注册到该事件上的所有回调函数的数组
+
+
+{Flux:Dispatcher}
+[register (callback : 要注册的回调函数<function>)] : 注册一个方法到Dispatcher闭包对象里
+[Dispatcher (payload : 要传递给register函数的参数 {type:<string/Symbol>参数类型,data:<>})] : 将数据
+
+
+
+
+确定需求,梳理逻辑,流程规划,明确最终的产品是什么样子,寻找合适的解决方案:3日
+规范JSON的数据字段和结构,定制数据流向,将功能点分块,将业务逻辑抽象出来:2日
+重构游戏,靠近掌政云的原型,构建游戏界面和逻辑+交互:3日+
+完善现有的基于React的定制界面,重定制以符合现在的业务逻辑:6日
+将定制界面与游戏编辑和游戏运行进行整合,数据对接,将逻辑耦合起来,实现完整的父子iframe交互:4日
+和后台杜正昊对接,联调接口,a测+修复bug+调整阶段:3日+
