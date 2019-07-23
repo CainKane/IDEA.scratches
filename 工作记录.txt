@@ -12,3 +12,10 @@ layuiadmin文档账户
 
 
 13867894460
+
+
+www.zhangzhengyun.com  ssh
+
+47.99.133.69 35000
+root
+jiming010158~!@
